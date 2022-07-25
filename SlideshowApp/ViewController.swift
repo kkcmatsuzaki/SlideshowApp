@@ -73,6 +73,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ViewController2
         vc.name = images[index]
+        if self.timer != nil {
+            startStop(self)
+        }
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
